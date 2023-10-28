@@ -26,6 +26,7 @@ ol {
 
 li {
   border: 1px solid black;
+  border-top: none;
   border-radius: 8px 8px 0 0;
   background-color: gray;
   height: 3rem;
@@ -55,4 +56,6 @@ input {
   justify-content: center;
   align-items: center;
   margin-top: 0;
+  border: 1px solid black;
+  border-top: none;
 }
