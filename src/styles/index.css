@@ -1,14 +1,4 @@
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
 .myTodos {
   display: flex;
   align-items: center;
@@ -16,10 +6,22 @@
   width: 100%;
   flex-direction: column;
 }
-
-ul {
+.input-style{
+  border: 1px solid black;
+  border-radius: 8px 8px 0 0;
+  background-color: gray;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   padding: 0;
+}
+
+ol {
+  width: 50%;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 li {
@@ -42,4 +44,15 @@ input {
   border-radius: 8px;
   width: 95%;
   border: none;
+}
+.number-task{
+  border-radius: 0 0 8px 8px;
+  background-color: gray;
+  height: 3rem;
+  width: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
 }

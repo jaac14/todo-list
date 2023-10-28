@@ -15,6 +15,8 @@ const MyTodos = () => {
   //manejando el error
   const [error, setError] = useState(false);
 
+  //manejar el contador de tareas
+  const [counterTask, setCounterTask] = useState(0)
   //function para fuardar my tarea ya terminada
 
   function saveMyTaks(event) {
@@ -41,6 +43,16 @@ const MyTodos = () => {
     setMyListTasks(newArr);
   };
 
+  //funcion para modificar el contador de tareas
+
+  function taskCounter(number) {
+    number = myListTasks.length
+    if (number === 0) {
+      return ('No hay tareas agregue una!')
+    }
+    else return number + ' Task'
+  }
+
   return (
     <div className="Container myTodos">
       {error ? (
@@ -50,17 +62,17 @@ const MyTodos = () => {
       ) : (
         false
       )}
-      <ul>
-        <li className="li-input">
-          <input
-            name="label"
-            type="text"
-            placeholder="Add your tasks here "
-            onChange={addInputValue}
-            onKeyDown={saveMyTaks}
-            value={task}
-          />
-        </li>
+      <div className="li-input input-style">
+        <input
+          name="label"
+          type="text"
+          placeholder="Add your tasks here "
+          onChange={addInputValue}
+          onKeyDown={saveMyTaks}
+          value={task}
+        />
+      </div>
+      <ol>
 
         {myListTasks.map((item, index) => {
           return (
@@ -73,7 +85,8 @@ const MyTodos = () => {
             </li>
           );
         })}
-      </ul>
+      </ol>
+      <div className="number-task">{taskCounter(myListTasks.length)}</div>
     </div>
   );
 };
