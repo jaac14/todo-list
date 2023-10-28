@@ -15,8 +15,6 @@ const MyTodos = () => {
   //manejando el error
   const [error, setError] = useState(false);
 
-  //manejar el contador de tareas
-  const [counterTask, setCounterTask] = useState(0)
   //function para fuardar my tarea ya terminada
 
   function saveMyTaks(event) {
